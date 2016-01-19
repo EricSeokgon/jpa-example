@@ -52,11 +52,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.190</version>
-		</dependency>
 	</dependencies>
 	
 	<build>
@@ -64,6 +59,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>org.h2.tools.Console</mainClass>
+					<arguments>
+						<argument>-browser</argument>
+					</arguments>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
